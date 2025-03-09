@@ -24,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
-/* শিরোনাম সেকশন (replacing old nav) */
+/* শিরোনাম সেকশন */
 .header-section {
-  background: #ED2100; /* updated background color */
+  background: #ED2100;
   padding: 40px 0;
   text-align: center;
 }
@@ -158,43 +158,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* (Previously) আরএসভিপি ফর্ম styling remains here,
-   but since the section is removed, these rules will not be applied */
-#rsvp-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-#rsvp-form input,
-#rsvp-form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #f0a500;
-  border-radius: 5px;
-  background: #1a1a2e;
-  color: #ffffff;
-}
-#rsvp-form button {
-  padding: 10px;
-  background: #f0a500;
-  color: #16213e;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-#rsvp-form button:hover {
-  background: #cf8500;
-}
-
-/* যোগাযোগ তথ্য */
-.contact-info p {
-  margin-top: 15px;
-  font-size: 16px;
-  color: #ffffff;
-}
-
 /* ফুটার */
 footer {
   background: #0f3460;
@@ -202,4 +165,3 @@ footer {
   text-align: center;
   color: #ffffff;
 }
-/* Social media links have been removed */
