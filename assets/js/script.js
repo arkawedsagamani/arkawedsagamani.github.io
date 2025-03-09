@@ -37,5 +37,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // প্রতি ১.৫ সেকেন্ডে নতুন শ্লোক তৈরি করা
     setInterval(createShloka, 1500);
-  });
-  
+});

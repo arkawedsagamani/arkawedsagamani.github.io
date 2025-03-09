@@ -165,4 +165,10 @@
     text-align: center;
     color: #ffffff;
   }
-  
+
+  /* Motif image styling */
+  .header-motif {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 200px; /* Adjust as needed */
+  }
