@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // কনটেইনারে যোগ করা
     shlokasContainer.appendChild(shlokaElement);
     
-    // অ্যানিমেশন শেষে এলিমেন্টটি সরানো
+    // অ্যানিমেশনের শেষে এলিমেন্টটি সরানো
     setTimeout(() => {
       shlokaElement.remove();
     }, duration * 1000);
