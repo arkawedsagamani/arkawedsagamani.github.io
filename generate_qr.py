@@ -1,24 +1,31 @@
+import os
 import qrcode
 
-# Replace the URL below with your actual wedding website URL hosted on GitHub Pages
+# Replace with your actual wedding website URL hosted on GitHub Pages
 wedding_url = "https://arkawedsagamani.github.io/"
 
-# Create a QRCode object with specific settings:
-qr = qrcode.QRCode(
-    version=1,  # Controls the size of the QR Code (1 is the smallest)
-    error_correction=qrcode.constants.ERROR_CORRECT_L,  # Error correction level (L = 7% recovery)
-    box_size=10,  # Size of each box in the QR grid (increase for a larger QR code)
-    border=4,  # Border thickness (must be at least 4 per standard)
-)
+# Define the filename for the generated QR code image
+output_filename = "wedding_qr.png"
 
-# Add your wedding website URL to the QR code
-qr.add_data(wedding_url)
-qr.make(fit=True)
+# Check if the QR code image already exists
+if not os.path.exists(output_filename):
+    # Create a QRCode object with specific settings:
+    qr = qrcode.QRCode(
+        version=1,  # Smallest size version
+        error_correction=qrcode.constants.ERROR_CORRECT_L,  # Error correction level (L = 7% recovery)
+        box_size=20,  # Increased box size for higher resolution
+        border=4,  # Border thickness (must be at least 4 per standard)
+    )
 
-# Create an image from the QR Code instance with black fill and white background
-img = qr.make_image(fill_color="black", back_color="white")
+    # Add your wedding website URL to the QR code
+    qr.add_data(wedding_url)
+    qr.make(fit=True)
 
-# Save the image to a file called wedding_qr.png
-img.save("wedding_qr.png")
+    # Create an image from the QR code with golden fill and white background
+    img = qr.make_image(fill_color="#FFD700", back_color="white")
 
-print("QR Code generated and saved as wedding_qr.png!")
+    # Save the image to a file
+    img.save(output_filename)
+    print(f"Golden QR Code generated and saved as {output_filename}!")
+else:
+    print(f"QR Code already exists as {output_filename}. Delete the file if you wish to regenerate it.")
