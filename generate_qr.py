@@ -22,7 +22,7 @@ if not os.path.exists(output_filename):
     qr.make(fit=True)
 
     # Create an image from the QR code with golden fill and white background
-    img = qr.make_image(fill_color="#FFD700", back_color="white")
+    img = qr.make_image(fill_color="#C9A226", back_color="white")
 
     # Save the image to a file
     img.save(output_filename)
